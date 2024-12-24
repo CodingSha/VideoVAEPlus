@@ -10,7 +10,7 @@
 
 [Yazhou Xing](https://yzxing87.github.io)\*, [Yang Fei](https://sunfly04.github.io)\*, [Yingqing He](https://yingqinghe.github.io)\*&#8224;, [Jingye Chen](https://jingyechen.github.io), [Jiaxin Xie](https://jiaxinxie97.github.io/Jiaxin-Xie), [Xiaowei Chi](https://scholar.google.com/citations?user=Vl1X_-sAAAAJ&hl=zh-CN), [Qifeng Chen](https://cqf.io/)&#8224; (*equal contribution, &#8224;corresponding author)
 
-#### [Project Page](https://yzxing87.github.io/vae/) | [Paper](#) | [High-Res Demo](https://www.youtube.com/embed/Kb4rn9z9xAA)
+#### [Project Page](https://yzxing87.github.io/vae/) | [Paper](https://arxiv.org/abs/2412.17805) | [High-Res Demo](https://www.youtube.com/embed/Kb4rn9z9xAA)
 
 A state-of-the-art **Video Variational Autoencoder (VAE)** designed for high-fidelity video reconstruction. This project leverages cross-modal and joint video-image training to enhance reconstruction quality.
 
