@@ -1,7 +1,7 @@
 model:
   base_learning_rate: 1.0e-4
   scale_lr: False
-  target: lvdm.models.autoencoder2plus1d_1dcnn.AutoencoderKL2plus1D_1dcnn
+  target: src.models.autoencoder2plus1d_1dcnn.AutoencoderKL2plus1D_1dcnn
   params:
     monitor: "val/rec_loss"
     video_key: video
@@ -14,7 +14,7 @@ model:
     img_video_joint_train: False
     
     lossconfig:
-      target: lvdm.modules.losses.LPIPSWithDiscriminator3D
+      target: src.modules.losses.LPIPSWithDiscriminator3D
       params:
         disc_start: 50001
         kl_weight: 0 

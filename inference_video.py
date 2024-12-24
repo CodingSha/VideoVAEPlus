@@ -9,7 +9,7 @@ import numpy as np
 import imageio
 from tqdm import tqdm
 from utils.common_utils import instantiate_from_config
-from lvdm.modules.t5 import T5Embedder
+from src.modules.t5 import T5Embedder
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 logging.basicConfig(

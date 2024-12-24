@@ -15,7 +15,7 @@ try:
 except:
     XFORMERS_IS_AVAILBLE = False
 
-from lvdm.modules.utils import (
+from src.modules.utils import (
     checkpoint,
     conv_nd,
     zero_module,

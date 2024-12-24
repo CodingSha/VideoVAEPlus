@@ -4,8 +4,8 @@ from einops import rearrange
 import torch.nn.functional as F
 import pytorch_lightning as pl
 
-from lvdm.modules.ae_modules import Encoder, Decoder
-from lvdm.distributions import DiagonalGaussianDistribution
+from src.modules.ae_modules import Encoder, Decoder
+from src.distributions import DiagonalGaussianDistribution
 from utils.common_utils import instantiate_from_config
 
 

@@ -2,7 +2,7 @@ import math
 import torch
 import torch.nn as nn
 
-from lvdm.modules.attention_temporal_videoae import *
+from src.modules.attention_temporal_videoae import *
 from einops import rearrange, reduce, repeat
 
 try:

@@ -2,12 +2,12 @@ import math
 import torch
 import torch.nn as nn
 
-from lvdm.models.autoencoder import AutoencoderKL
-from lvdm.modules.ae_modules import Normalize, nonlinearity
-from lvdm.modules.attention_temporal_videoae import *
-from lvdm.modules.t5 import T5Embedder
-from lvdm.distributions import DiagonalGaussianDistribution
-from lvdm.models.autoencoder_temporal import EncoderTemporal1DCNN, DecoderTemporal1DCNN
+from src.models.autoencoder import AutoencoderKL
+from src.modules.ae_modules import Normalize, nonlinearity
+from src.modules.attention_temporal_videoae import *
+from src.modules.t5 import T5Embedder
+from src.distributions import DiagonalGaussianDistribution
+from src.models.autoencoder_temporal import EncoderTemporal1DCNN, DecoderTemporal1DCNN
 
 try:
     import xformers

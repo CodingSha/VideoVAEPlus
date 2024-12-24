@@ -1,4 +1,4 @@
-from lvdm.modules.losses.contperceptual import (
+from src.modules.losses.contperceptual import (
     LPIPSWithDiscriminator,
     MSEWithDiscriminator,
     LPIPSWithDiscriminator3D,
