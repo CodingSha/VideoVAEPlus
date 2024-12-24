@@ -1,4 +1,4 @@
-# Large Motion Video Autoencoding with Cross-modal Video VAE
+# VideoVAE+: Large Motion Video Autoencoding with Cross-modal Video VAE
 
 | Ground Truth (GT) | Reconstructed |
 |-------------------|---------------|
@@ -27,8 +27,8 @@ A state-of-the-art **Video Variational Autoencoder (VAE)** designed for high-fid
 
 ## ⏰ Todo
 
-- [ ] **Release Pretrained Model Weights**
-- [ ] **Release Inference Code**
+- [x] **Release Pretrained Model Weights**
+- [x] **Release Inference Code**
 - [ ] **Release Training Code**
 
 ---
@@ -184,4 +184,4 @@ bash scripts/evaluation_video.sh
 
 ## 📝 License
 
-This project is licensed under the [MIT License](LICENSE).
+Please follow [CC-BY-NC-ND](./LICENSE).
