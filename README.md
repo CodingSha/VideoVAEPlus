@@ -185,3 +185,7 @@ bash scripts/evaluation_video.sh
 ## 📝 License
 
 Please follow [CC-BY-NC-ND](./LICENSE).
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=VideoVerses/VideoVAEPlus&type=Date)](https://star-history.com/#VideoVerses/VideoVAEPlus&Date)
