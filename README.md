@@ -40,8 +40,8 @@ Follow these steps to set up your environment and run the code:
 ### 1. Clone the Repository
 
 ```bash
-git clone git@github.com:yzxing87/vae.git
-cd vae
+git clone https://github.com/VideoVerses/VideoVAEPlus.git
+cd VideoVAEPlus
 ```
 
 ### 2. Set Up the Environment
