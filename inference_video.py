@@ -96,7 +96,7 @@ def save_video(tensor, save_path, fps):
         arr = tensor.detach().cpu().numpy().squeeze().astype(np.uint8)
 
         c, t, h, w = arr.shape
-        video_writer = imageio.get_writer(save_path, fps=fps)
+        video_writer = imageio.get_writer(save_path, fps=fps, macro_block_size=1)
 
         for i in range(t):
             frame = np.transpose(arr[:, i, ...], (1, 2, 0))  # [c, h, w] -> [h, w, c]
@@ -127,6 +127,7 @@ def process_in_chunks(
             padding_frames = 4 - (num_frames % 4)
             padding = video_data[:, :, -1:, :, :].repeat(1, 1, padding_frames, 1, 1)
             video_data = torch.cat((video_data, padding), dim=2)
+            num_frames = video_data.size(2)
 
         start = 0
 
