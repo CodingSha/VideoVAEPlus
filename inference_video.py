@@ -10,6 +10,7 @@ import imageio
 from tqdm import tqdm
 from utils.common_utils import instantiate_from_config
 from src.modules.t5 import T5Embedder
+import torchvision
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 logging.basicConfig(
@@ -44,7 +45,7 @@ def parse_args():
     parser.add_argument(
         "--chunk_size",
         type=int,
-        default=20,
+        default=16,
         help="Number of frames per chunk for processing.",
     )
     parser.add_argument(
@@ -74,7 +75,8 @@ def data_processing(video_path, resolution):
 
         video_length = len(video_reader)
         vid_fps = video_reader.get_avg_fps()
-        frames = video_reader.get_batch(list(range(video_length)))
+        frame_indices = list(range(0, video_length))
+        frames = video_reader.get_batch(frame_indices)
         assert (
             frames.shape[0] == video_length
         ), f"Frame mismatch: {len(frames)} != {video_length}"
@@ -89,20 +91,14 @@ def data_processing(video_path, resolution):
         return None, None
 
 
-def save_video(tensor, save_path, fps):
+def save_video(tensor, save_path, fps: float):
     """Save video tensor to a file."""
     try:
         tensor = torch.clamp((tensor + 1) / 2, 0, 1) * 255
-        arr = tensor.detach().cpu().numpy().squeeze().astype(np.uint8)
-
+        arr = tensor.detach().cpu().squeeze().to(torch.uint8)
         c, t, h, w = arr.shape
-        video_writer = imageio.get_writer(save_path, fps=fps, macro_block_size=1)
-
-        for i in range(t):
-            frame = np.transpose(arr[:, i, ...], (1, 2, 0))  # [c, h, w] -> [h, w, c]
-            video_writer.append_data(frame)
-
-        video_writer.close()
+            
+        torchvision.io.write_video(save_path, arr.permute(1, 2, 3, 0), fps=fps, options={'codec': 'libx264', 'crf': '15'})
         logging.info(f"Video saved to {save_path}")
     except Exception as e:
         logging.error(f"Error saving video {save_path}: {e}")
