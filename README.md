@@ -70,7 +70,7 @@ pip install -r requirements.txt
 | Model Name      | Latent Channels | Download Link    |
 |-----------------|-----------------|------------------|
 | sota-4z         | 4               | [Download](https://drive.google.com/file/d/1WEKBdRFjEUxwcBgX_thckXklD8s6dDTj/view?usp=drive_link) |
-| sota-4z-text    | 4               | [Download](https://drive.google.com/file/d/1PWRPn7-D8vqcOH57dmdnipgOe174H9Zs/view?usp=sharing) |
+| sota-4z-text    | 4               | [Download](https://drive.google.com/file/d/1QfqrKIWu5zG10U-xRgeF8Dhp__njC8OH/view?usp=sharing) |
 | sota-16z        | 16              | [Download](https://drive.google.com/file/d/13v2Pq6dG1jo7RNImxNOXr9-WizgMiJ7M/view?usp=sharing) |
 | sota-16z-text   | 16              | [Download](https://drive.google.com/file/d/1iYCAtmdaOX0V41p0vbt_6g8kRS1EK56p/view?usp=sharing) |
 
