@@ -8,7 +8,7 @@ model:
     image_key: video
     img_video_joint_train: False
     caption_guide: True
-    use_quant_conv: False
+    use_quant_conv: True
     t5_model_max_length: 100
 
     ckpt_path: ckpt/sota-4-4z-text.ckpt
@@ -40,5 +40,3 @@ model:
       out_ch: 4
       ch: 4
       attn_temporal_factor: [2,4]
-      use_temporal_cross_attention: False
-      use_spatial_cross_attention: True
