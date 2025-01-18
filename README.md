@@ -25,11 +25,19 @@ A state-of-the-art **Video Variational Autoencoder (VAE)** designed for high-fid
 ![SOTA Table](docs/sota-table.png)
 ---
 
+## 📰 News
+- [Jan 2025] 🏋️ Released training code & better pretrained 4z-text weight
+- [Dec 2024] 🚀 Released inference code and pretrained models
+- [Dec 2024] 📝 Released paper on [arXiv](https://arxiv.org/abs/2412.17805)
+- [Dec 2024] 💡 Project page is live at [VideoVAE+](https://yzxing87.github.io/vae/)
+
+---
+
 ## ⏰ Todo
 
 - [x] **Release Pretrained Model Weights**
 - [x] **Release Inference Code**
-- [ ] **Release Training Code**
+- [x] **Release Training Code**
 
 ---
 
@@ -161,6 +169,60 @@ python inference_image.py \
 ```
 
 - **Note**: that the batch size is set to 1 because the images in the example folder have varying resolutions. If you have a batch of images with the same resolution, you can increase the batch size to accelerate inference.
+
+---
+
+## 🏋️ Training
+
+### Quick Start
+
+To start training, use the following command:
+
+```bash
+bash scripts/run_training.sh config_16z
+```
+
+This default command trains the 16-channel model with video reconstruction on a single GPU.
+
+### Configuration Options
+
+You can modify the training configuration by changing the config parameter:
+
+- `config_4z`: 4-channel model
+- `config_4z_joint`: 4-channel model trained jointly on both image and video data
+- `config_4z_cap`': 4-channel model with text guidance
+- `config_16z`: Default 16-channel model
+- `config_16z_joint`: 16-channel model trained jointly on both image and video data
+- `config_16z_cap`: 16-channel model with text guidance
+
+Note: Do not include the `.yaml` extension when specifying the config.
+
+### Data Preparation
+
+#### Dataset Structure
+The training data should be organized in a CSV file with the following format:
+
+```csv
+path,text
+/absolute/path/to/video1.mp4,A person walking on the beach
+/absolute/path/to/video2.mp4,A car driving down the road
+```
+
+#### Requirements:
+- Use absolute paths for video files
+- Include two columns: path and text
+- For training without text guidance, leave the caption column empty but maintain the CSV structure
+
+#### Example CSV:
+```csv
+# With captions
+/data/videos/clip1.mp4,A dog playing in the park
+/data/videos/clip2.mp4,Sunset over the ocean
+
+# Without captions
+/data/videos/clip1.mp4,
+/data/videos/clip2.mp4,
+```
 
 ---
 

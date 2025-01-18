@@ -41,5 +41,3 @@ model:
       out_ch: 16
       ch: 16 
       attn_temporal_factor: [2,4]
-      use_temporal_cross_attention: False
-      use_spatial_cross_attention: True
