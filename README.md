@@ -9,6 +9,7 @@
 | <img src="docs/case5/gtview7.gif" alt="GT Video 5" width="384" height="240"> | <img src="docs/case5/fkview7.gif" alt="Reconstructed Video 5" width="384" height="240"> |
 
 [Yazhou Xing](https://yzxing87.github.io)\*, [Yang Fei](https://sunfly04.github.io)\*, [Yingqing He](https://yingqinghe.github.io)\*&#8224;, [Jingye Chen](https://jingyechen.github.io), [Jiaxin Xie](https://jiaxinxie97.github.io/Jiaxin-Xie), [Xiaowei Chi](https://scholar.google.com/citations?user=Vl1X_-sAAAAJ&hl=zh-CN), [Qifeng Chen](https://cqf.io/)&#8224; (*equal contribution, &#8224;corresponding author)
+*The Hong Kong University of Science and Technology*
 
 #### [Project Page](https://yzxing87.github.io/vae/) | [Paper](https://arxiv.org/abs/2412.17805) | [High-Res Demo](https://www.youtube.com/embed/Kb4rn9z9xAA)
 
